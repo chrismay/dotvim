@@ -69,18 +69,6 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
 " Unimpaired configuration
 " Bubble single lines
 nmap <C-Up> [e
@@ -107,7 +95,9 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color solarized
+colorscheme solarized
+syntax enable
+set background=dark
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -116,8 +106,6 @@ set directory=~/.vim/backup
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
 
-" MacVIM shift+arrow-keys behavior (required in .vimrc)
-let macvim_hig_shift_movement = 1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim

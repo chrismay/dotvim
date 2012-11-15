@@ -5,7 +5,6 @@ set visualbell
 set guioptions-=T
 
 " Default gui color scheme
-color solarized
 colorscheme solarized
 
 map <leader>r :NERDTreeFind<cr>

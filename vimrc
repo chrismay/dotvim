@@ -110,8 +110,13 @@ let g:JSLintHighlightErrorLine = 0
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-" Show (partial) command in the status line
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END" Show (partial) command in the status line
 set showcmd
 
 set nofoldenable    " disable folding
+
+
 

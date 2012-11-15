@@ -97,8 +97,10 @@ set modeline
 set modelines=10
 
 " Default color scheme
+se t_Co=16
 colorscheme solarized
 syntax enable
+let g:solarized_termcolors=16
 set background=dark
 
 " Directories for swp files

@@ -1,4 +1,8 @@
 call pathogen#runtime_append_all_bundles()
+filetype off
+syntax on
+" load the plugin and indent settings for the detected filetype
+filetype plugin indent on
 call pathogen#helptags()
 
 set nocompatible
@@ -66,8 +70,6 @@ au BufRead,BufNewFile *.txt call s:setupWrapping()
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
 
 " Unimpaired configuration
 " Bubble single lines

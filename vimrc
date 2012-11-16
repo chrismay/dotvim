@@ -65,6 +65,11 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 au BufRead,BufNewFile *.txt,*.md call s:setupWrapping()
 
+" oracle sqlplus buffer editing (sql mode)
+augroup filetypedetect
+au BufNewFile,BufRead afiedt.buf      setf sql
+augroup END
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 

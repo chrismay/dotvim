@@ -63,7 +63,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set f
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
-au BufRead,BufNewFile *.txt call s:setupWrapping()
+au BufRead,BufNewFile *.txt,*.md call s:setupWrapping()
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
